@@ -150,3 +150,8 @@ $fa-font-path: "../fonts";
     -o-transition: height 0.6s ease;
     transition: height 0.6s ease;
 }
+
+select option {
+    background-color: #333;
+    color: white;
+}
