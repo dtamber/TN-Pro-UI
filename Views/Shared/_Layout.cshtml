@@ -1,0 +1,165 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="expires" content="0" />
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
+    <title>@ViewData["Title"] - TN_Pro_UI</title>
+    <link href="~/css/main.min.css" rel="stylesheet" />
+
+</head>
+<body>
+
+    <header class="navbar p-0 fixed-top d-flex bg-primary border-bottom border-dark flex-row shadow-sm">
+        <div class="text-center navbar-brand-wrapper mx-auto mx-sm-0">
+            <a class="navbar-brand py-3 ml-3 mr-0" href="#">
+                <img src="images/tnLogo_white_new.png" style="height:45px;" />
+            </a>
+        </div>
+        <div class="align-items-center d-none d-sm-block">
+            <ul class="nav justify-content-end">
+                <li class="nav-item d-none d-sm-block">
+                    <button class="btn btn-link " data-toggle="modal" data-target="#alarmDlg" title="Alarms" onclick="return false;">
+                        <i class="fa fa-bell"> </i>
+                        <span class="badge badge-danger"><asp:Literal runat="server" ID="litHeaderAlarmCnt" /></span>
+                    </button>
+                </li>
+
+                <li class="nav-item d-none d-sm-block">
+                    <button class="btn btn-link" title="Settings">
+                        <i class="fa fa-cog"> </i>
+                    </button>
+                </li>
+
+
+                <li class="nav-item d-none d-sm-block">
+                    <a class="btn btn-link text-light" data-toggle="modal" href="#" title="Help">
+                        <i class="fa fa-question"> </i>
+                    </a>
+                </li>
+
+                <li class="nav-item d-none d-sm-block mt-2 mx-4">
+                    <button class="btn btn-sm " href="#">
+                        <i class="fa fa-user text-dark"> </i>
+                        Logout
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="container-fluid mt-6">
+
+        <div class="row flex-xl-nowrap">
+            <div class="col-12 col-md-3 col-xl-2 sidebar ">
+                <div class="search d-flex align-items-center">
+                    <div class="input-group input-group-sm ">
+                        <input type="text" class="form-control " placeholder="Search..." />
+                        <div class="input-group-append">
+                            <span class="input-group-text input-sm" id="basic-addon1">
+                                <i class="fas fa-search text-primary">
+                                </i>
+                            </span>
+                        </div>
+                    </div>
+                    <button class="btn d-md-none btn-sm ml-3" type="button" data-toggle="collapse" data-target="#sidebar"
+                            aria-expanded="false" aria-controls="sidebar">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                </div>
+
+
+                <nav id="sidebar" class="collapse navbar-collapse">
+                    <ul class="nav pt-4">
+
+
+                        <li data-id="demo_home" class="nav-item ">
+                            <a class="nav-link active" href="demo_home.aspx">
+                                <i class="fas fa-home float-right"></i>Home
+                            </a>
+                        </li>
+                        <li data-id="demo_map" class="nav-item">
+                            <a class="nav-link" href="demo_map.aspx">
+                                <i class="fas fa-map float-right"></i>Map
+                            </a>
+                        </li>
+                        <li data-id="demo_tanks" class="nav-item">
+                            <a class="nav-link" href="demo_tanks.aspx">
+                                <i class="fas fa-database float-right"></i>Tanks
+                            </a>
+                        </li>
+                        <li data-id="demo_rooms" class="nav-item">
+                            <a class="nav-link" href="demo_rooms.aspx">
+                                <i class="fa fa-warehouse-alt float-right"></i>Rooms
+                            </a>
+                        </li>
+                        <li data-id="demo_equipment" class="nav-item">
+                            <a class="nav-link" href="demo_equipment.aspx">
+                                <i class="fas fa-industry-alt float-right"></i>Equipment
+                            </a>
+                        </li>
+                        <li data-id="demo_history" class="nav-item">
+                            <a class="nav-link" href="demo_history.aspx">
+                                <i class="fas fa-chart-line float-right"></i>History
+                            </a>
+                        </li>
+                        <li data-id="demo_scheduler" class="nav-item">
+                            <a class="nav-link" href="demo_scheduler.aspx">
+                                <i class="fas fa-calendar-alt float-right"></i> Scheduler
+                            </a>
+                        </li>
+                        <li data-id="demo_settings" class="nav-item">
+                            <a class="nav-link" href="demo_settings.aspx">
+                                <i class="fas fa-cog float-right"></i> Settings
+                            </a>
+                        </li>
+                        <li data-id="demo_about" class="nav-item">
+                            <a class="nav-link" href="demo_about.aspx">
+                                <i class="fas fa-info-circle float-right"></i> About
+                            </a>
+                        </li>
+                        <li data-id="demo_demo" class="nav-item mt-5">
+                            <a class="nav-link" href="home.aspx">
+                                <i class="fas fa-arrow-right float-right"></i> Demo
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-12 col-md-9 col-xl-10 ml-md-4 mt-md-5">
+                <div class="row">
+
+                    @RenderBody()
+
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div id="alarmDlg" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Alarms</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <asp:Literal runat="server" ID="litAlarmDlg" />
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/js/bootstrap.min.js"></script>
+
+</body>
+</html>

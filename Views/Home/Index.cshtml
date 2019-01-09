@@ -1,0 +1,622 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div id="home" class="col-12 col-xl-10 d-flex flex-column flex-xl-row flex-wrap">
+
+    <div class="card shadow-sm mb-4 order-1 section">
+
+        <div class="card-header bg-primary">
+            <h4 class='float-left text-light'>Alarms</h4>
+            <span class="badge badge-danger ml-2"></span>
+            <button data-text='True' class='btn btn-sm btn-link float-right ' title='Hide'
+                    data-toggle="collapse" href="#alarmsBody">
+                <i class="fa fa-chevron-up"></i>
+            </button>
+
+        </div>
+        <div id="alarmsBody" class="collapse show">
+            <div class="card-body ">
+                
+            </div>
+        </div>
+    </div>
+    <div class="card shadow-sm mb-4 order-2 section">
+
+        <div class="card-header bg-primary">
+            <h4 class='float-left text-light'>Warnings</h4>
+            <span class="badge badge-warning ml-2">8</span>
+
+            <button data-text='True' class='btn btn-link btn-sm float-right' title='Hide'
+                    data-toggle="collapse" href="#warningsBody">
+                <i class="fa fa-chevron-up"></i>
+            </button>
+        </div>
+
+        <div id="warningsBody" class="collapse show">
+            <div class="card-body">
+
+
+                <div class="card">
+                    <div class="card-header text-light py-0">
+                        <h6 class="float-left pt-2">
+                            Do these tanks need tempearture control?
+                            <span class="badge badge-warning ml-2">2</span>
+                        </h6>
+                        <button class='float-right btn btn-sm btn-link' data-toggle="collapse" href="#fullOff" data-text='True'>
+                            <i class="fa fa-chevron-up mr-2"></i>
+                        </button>
+                    </div>
+
+                    <div id="fullOff" class="collapse show">
+                        <div class="card-body">
+                            <table class='table table-striped table-bordered table-hover table-sm  shadow-sm'>
+                                <thead>
+                                    <tr class="bg-dark">
+                                        <th style="width:50px;">ID</th>
+                                        <th>Lot</th>
+                                        <th>Mode</th>
+                                        <th title='Probe 1'>Temperature</th>
+                                        <th title='SP1'>Set Point</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <a href='#' class='tankID'
+                                               BlendID='18CS-VH-6M-1' vTank='False'>OT7</a>
+                                        </td>
+                                        <td>18CS-KH-E2-2-HP</td>
+                                        <td>OFF</td>
+                                        <td>70.0&deg;F</td>
+                                        <td>62.0&deg;F</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href='demo_control.aspx?gtype=3&TankNETID=OAK3B' class='tankID'
+                                               BlendID='18CS-VH-6M-1' vTank='False'>OT10</a>
+                                        </td>
+                                        <td>18CS-KH-E2-2-HP</td>
+                                        <td>OFF</td>
+                                        <td>70.0&deg;F</td>
+                                        <td>58.0&deg;F</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+
+                    <div class="card-header text-light py-0">
+                        <h6 class="float-left pt-2">Are these tanks wasting energy?<span class="badge badge-warning ml-2">3</span></h6>
+                        <button class='float-right btn btn-sm btn-link' data-toggle="collapse" href="#other" data-text='True'>
+                            <i class="fa fa-chevron-down mr-2"></i>
+                        </button>
+                    </div>
+
+
+                    <div id="other" class="collapse">
+                        <div class="card-body">
+                            <table class='table table-striped table-bordered table-hover table-sm  shadow-sm'>
+                                <thead>
+                                    <tr class="bg-dark">
+                                        <th style="width:50px;">ID</th>
+                                        <th>Lot</th>
+                                        <th>Mode</th>
+                                        <th title='Probe 1'>Temperature</th>
+                                        <th title='SP1'>Set Point</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <a href='#' class='tankID'
+                                               BlendID='18CS-VH-6M-1' vTank='False'>OT7</a>
+                                        </td>
+                                        <td>18CS-KH-E2-2-HP</td>
+                                        <td>COOL</td>
+                                        <td>70.0&deg;F</td>
+                                        <td>54.0&deg;F</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href='demo_control.aspx?gtype=3&TankNETID=OAK3B' class='tankID'
+                                               BlendID='18CS-VH-6M-1' vTank='False'>OT10</a>
+                                        </td>
+                                        <td>18CS-KH-E2-2-HP</td>
+                                        <td>COOL</td>
+                                        <td>70.0&deg;F</td>
+                                        <td>65.0&deg;F</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href='demo_control.aspx?gtype=3&TankNETID=OAK3B' class='tankID'
+                                               BlendID='18CS-VH-6M-1' vTank='False'>OT14</a>
+                                        </td>
+                                        <td>18CS-KH-E2-2-HP</td>
+                                        <td>COOL</td>
+                                        <td>70.0&deg;F</td>
+                                        <td>41.0&deg;F</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header text-light py-0">
+                        <h6 class="float-left pt-2">Do these tanks need alarms enabled?<span class="badge badge-warning ml-2">3</span></h6>
+                        <button class='float-right btn btn-sm btn-link' data-toggle="collapse" href="#other2" data-text='True'>
+                            <i class="fa fa-chevron-down mr-2"></i>
+                        </button>
+                    </div>
+
+                    <div id="other2" class="collapse">
+                        <div class="card-body">
+                            <table class='table table-striped table-bordered table-hover table-sm  shadow-sm'>
+                                <thead>
+                                    <tr class="bg-dark">
+                                        <th style="width:50px;">ID</th>
+                                        <th>Lot</th>
+                                        <th>Mode</th>
+                                        <th title='Probe 1'>Temperature</th>
+                                        <th title='SP1'>Set Point</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <a href='#' class='tankID'
+                                               BlendID='18CS-VH-6M-1' vTank='False'>OT1</a>
+                                        </td>
+                                        <td>18CS-KH-E2-2-HP</td>
+                                        <td>COOL</td>
+                                        <td>63.0&deg;F</td>
+                                        <td>70.0&deg;F</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href='#' class='tankID'
+                                               BlendID='18CS-VH-6M-1' vTank='False'>OT3</a>
+                                        </td>
+                                        <td>18CS-KH-E2-2-HP</td>
+                                        <td>COOL</td>
+                                        <td>88.0&deg;F</td>
+                                        <td>65.0&deg;F</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href='#' class='tankID'
+                                               BlendID='18CS-VH-6M-1' vTank='False'>OT6</a>
+                                        </td>
+                                        <td>18CS-KH-E2-2-HP</td>
+                                        <td>COOL</td>
+                                        <td>76.0&deg;F</td>
+                                        <td>85.0&deg;F</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+    <div class="card shadow-sm mb-4 order-3 section">
+
+        <div class="card-header bg-primary">
+            <h4 class='float-left text-light'>Pump Over Tasks</h4>
+            <span class="badge badge-secondary ml-2">4</span>
+            <button data-text='True' class='btn btn-sm float-right btn-link ' title='Hide'
+                    data-toggle="collapse" href="#pumpovers">
+                <i class="fa fa-chevron-up"></i>
+            </button>
+
+        </div>
+
+        <div id="pumpovers" class="collapse show">
+            <div class="card-body">
+                <table class='table table-striped table-bordered table-hover table-sm  shadow-sm'>
+                    <thead>
+                        <tr class="thead-dark">
+                            <th style="width:40px;"></th>
+                            <th style="width:50px;">ID</th>
+                            <th>Lot</th>
+                            <th>Start Time</th>
+                            <th>Duration (min)</th>
+                            <th>Venturi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <button data-text='True' class='btn btn-sm btn-link ' title='Completed'
+                                        href="#">
+                                    <i class="fa fa-check-circle text-success"></i>
+                                </button>
+                            </td>
+                            <td>
+                                <a href='demo_control.aspx?gtype=3&TankNETID=13TA3099' class='tankID'
+                                   BlendID='' vTank='False'>OT1</a>
+                            </td>
+                            <td>
+                                <a class='loadGraph' href='#' data-TankNETID='13TA3099'
+                                   data-dbTable='temperature'>15CS-KH-E2-2-HP</a>
+                            </td>
+                            <td>9:00 am</td>
+                            <td>15</td>
+                            <td>YES</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button data-text='True' class='btn btn-sm btn-link ' title='Missed'
+                                        href="#">
+                                    <i class="fa fa-times-circle text-danger"></i>
+                                </button>
+                            </td>
+                            <td>
+                                <a href='demo_control.aspx?gtype=3&TankNETID=13TA3099' class='tankID'
+                                   BlendID='' vTank='False'>OT1</a>
+                            </td>
+                            <td>
+                                <a class='loadGraph' href='#' data-TankNETID='13TA3099'
+                                   data-dbTable='temperature'>15CS-KH-E2-2-HP</a>
+                            </td>
+                            <td>10:00 am</td>
+                            <td>15</td>
+                            <td>YES</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button data-text='True' class='btn btn-sm btn-link ' title='Pending'
+                                        href="#">
+                                    <i class="fa fa-clock text-secondary"></i>
+                                </button>
+                            </td>
+                            <td>
+                                <a href='demo_control.aspx?gtype=3&TankNETID=13TA3099' class='tankID'
+                                   BlendID='' vTank='False'>OT2</a>
+                            </td>
+                            <td>
+                                <a class='loadGraph' href='#' data-TankNETID='13TA3099'
+                                   data-dbTable='temperature'>15CS-KH-E2-2-HP</a>
+                            </td>
+                            <td>11:00 am</td>
+                            <td>15</td>
+                            <td>YES</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button data-text='True' class='btn btn-sm btn-link ' title='Pending'
+                                        href="#">
+                                    <i class="fa fa-clock text-secondary"></i>
+                                </button>
+                            </td>
+                            <td>
+                                <a href='demo_control.aspx?gtype=3&TankNETID=13TA3099' class='tankID'
+                                   BlendID='' vTank='False'>OT3</a>
+                            </td>
+                            <td>
+                                <a class='loadGraph' href='#' data-TankNETID='13TA3099'
+                                   data-dbTable='temperature'>15CS-KH-E2-2-HP</a>
+                            </td>
+                            <td>11:00 am</td>
+                            <td>15</td>
+                            <td>YES</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+    <div class="card shadow-sm mb-4 order-4 section">
+
+        <div class="card-header bg-primary">
+            <h4 class='float-left text-light'>Active Fermentations</h4>
+            <span class="badge badge-secondary ml-2">4</span>
+
+            <button data-text='True' class='btn btn-sm float-right btn-link ' title='Hide'
+                    data-toggle="collapse" href="#ferments">
+                <i class="fa fa-chevron-up"></i>
+            </button>
+        </div>
+
+        <div id="ferments" class="collapse show">
+            <div class="card-body">
+                <table class='table table-striped table-bordered table-hover table-sm  shadow-sm'>
+                    <thead>
+                        <tr class="thead-dark">
+                            <th>Lot</th>
+                            <th style="width:50px;">ID</th>
+                            <th>Temperature</th>
+                            <th>Brix</th>
+                            <th>Inoc Date</th>
+                            <th>Days Fermenting</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <a class='loadGraph' href='#' data-TankNETID='13TA3099'
+                                   data-dbTable='temperature'>15CS-KH-E2-2-HP</a>
+                            </td>
+                            <td>
+                                <a href='demo_control.aspx?gtype=3&TankNETID=13TA3099' class='tankID'
+                                   BlendID='' vTank='False'>OT1</a>
+                            </td>
+                            <td>88.8°F</td>
+                            <td>15.0°</td>
+                            <td>10/10/18</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a class='loadGraph' href='#' data-TankNETID='13TA3099'
+                                   data-dbTable='temperature'>15CS-KH-E2-2-HP</a>
+                            </td>
+                            <td>
+                                <a href='demo_control.aspx?gtype=3&TankNETID=13TA3099' class='tankID'
+                                   BlendID='' vTank='False'>OT2</a>
+                            </td>
+                            <td>88.8°F</td>
+                            <td>15.0°</td>
+                            <td>10/10/18</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a class='loadGraph' href='#' data-TankNETID='13TA3099'
+                                   data-dbTable='temperature'>15CS-KH-E2-2-HP</a>
+                            </td>
+                            <td>
+                                <a href='demo_control.aspx?gtype=3&TankNETID=13TA3099' class='tankID'
+                                   BlendID='' vTank='False'>OT3</a>
+                            </td>
+                            <td>88.8°F</td>
+                            <td>15.0°</td>
+                            <td>10/10/18</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a class='loadGraph' href='#' data-TankNETID='13TA3099'
+                                   data-dbTable='temperature'>15CS-KH-E2-2-HP</a>
+                            </td>
+                            <td>
+                                <a href='demo_control.aspx?gtype=3&TankNETID=13TA3099' class='tankID'
+                                   BlendID='' vTank='False'>OT4</a>
+                            </td>
+                            <td>88.8°F</td>
+                            <td>15.0°</td>
+                            <td>10/10/18</td>
+                            <td>5</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+    <div class="card shadow-sm mb-4 order-5 section">
+
+        <div class="card-header bg-primary">
+            <h4 class='float-left text-light'>Empty Tanks</h4>
+            <button data-text='True' class='btn btn-link  btn-sm float-right' title='Hide'
+                    data-toggle="collapse" href="#emptyTanksBody">
+                <i class="fa fa-chevron-up"></i>
+            </button>
+        </div>
+        <div id="emptyTanksBody" class="collapse show">
+            <div class="card-body">
+            </div>
+        </div>
+    </div>
+    <div class="card shadow-sm mb-4 order-6 section">
+
+        <div class="card-header bg-primary">
+            <h4 class='float-left text-light'>Audit Log</h4>
+
+
+            <button data-text='True' class='btn btn-link btn-sm ml-2  float-right' title='Hide'
+                    data-toggle="collapse" href="#auditBody">
+                <i class="fa fa-chevron-up"></i>
+            </button>
+            <div class="input-group input-group-sm w-25 float-right ">
+                <input type="text" class="form-control " value="11/29/2018" />
+                <div class="input-group-append">
+                    <span class="input-group-text input-sm" id="basic-addon1">
+                        <i class="fa fa-calendar text-primary">
+                        </i>
+                    </span>
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <div id="auditBody" class="collapse show">
+            <div class="card-body">
+            </div>
+        </div>
+    </div>
+    <div class="card shadow-sm mb-4 order-7 section">
+
+        <div class="card-header bg-primary">
+            <h4 class='float-left text-light'>Recent Items</h4>
+            <button data-text='True' class='btn btn-sm float-right btn-link ' title='Hide'
+                    data-toggle="collapse" href="#graphsBody">
+                <i class="fa fa-chevron-up"></i>
+            </button>
+
+            <%--<button data-text='True' class='btn btn-link  btn-sm float-right mr-2' title='Clear'>
+                <i class="fa fa-times"></i>
+            </button>--%>
+        </div>
+
+        <div id="graphsBody" class="collapse show">
+            <div class="card-body">
+
+
+                <div class="card">
+                    <div class="card-header text-light py-0">
+                        <h6 class="float-left pt-2">Graphs</h6>
+                        <button class='float-right btn btn-sm btn-link' data-toggle="collapse" href="#graphs" data-text='True'>
+                            <i class="fa fa-chevron-up mr-2"></i>
+                        </button>
+                    </div>
+
+                    <div id="graphs" class="collapse show">
+                        <div class="card-body">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header text-light py-0">
+                        <h6 class="float-left pt-2">Tanks</h6>
+                        <button class='float-right btn btn-sm btn-link'
+                                data-toggle="collapse" href="#tanks" data-text='True'>
+                            <i class="fa fa-chevron-down mr-2"></i>
+                        </button>
+                    </div>
+
+                    <div id="tanks" class="collapse">
+                        <div class="card-body">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="card shadow-sm mb-4 order-8 section">
+        <div class="card-header bg-primary">
+            <h4 class='float-left text-light'>FAQs</h4>
+
+            <button data-text='True' class='btn btn-link btn-sm float-right' title='Hide'
+                    data-toggle="collapse" href="#faqsBody">
+                <i class="fa fa-chevron-up"></i>
+            </button>
+
+
+        </div>
+
+        <div id="faqsBody" class="collapse show">
+            <div class="card-body">
+                <table class='table table-striped table-bordered table-hover table-sm shadow-sm'>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <p>
+                                    <b>
+                                        Why don't my changes appear in the software after I apply
+                                        them?
+                                    </b><br />
+                                    <span class="error">
+                                        ***Important*** mandatory browser cache
+                                        setting for TankNET
+                                    </span><br />
+                                    In order to ensure realtime information in the web software,
+                                    you must change your browser cache settings accordingly.
+                                    <a id="ctl00_phW_Lnk1" href="http://www.acrolon.com/support/login.aspx?fromTankNet=true"
+                                       target="_blank">Read More</a>
+                                </p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <p>
+                                    <b>
+                                        What does it mean when the software reports that a tank is
+                                        OFFLINE?
+                                    </b><br />
+                                    An offline alarm indicates that the TankNET server can not
+                                    communicate with the controller across the network. Please
+                                    follow these steps to troubleshoot an offline issue: <a id="ctl00_phW_Lnk2"
+                                                                                            href="http://www.acrolon.com/support/login.aspx?fromTankNet=true"
+                                                                                            target="_blank">Read More</a>
+                                </p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <p>
+                                    <b>Why does a (---) appear instead of a temperature?</b><br />
+                                    Three dashes in the display indicates the controller is unable
+                                    to communicate with the probe. Possible causes include: probe
+                                    not wired properly, loose or damaged probe wire, bad extension
+                                    connection (if extending standard probe leads), faulty probe.
+                                    <a href="http://www.acrolon.com/support/login.aspx?fromTankNet=true"
+                                       target="_blank">Read More</a>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>
+                                    <b>
+                                        Why doesn't voltage get to the solenoid even though the relay
+                                        indicator shows in the display?
+                                    </b><br />This is typically
+                                    the result of a blown relay fuse. Please consult the user
+                                    manual for your TankNET controller model for instructions on
+                                    how to replace a relay fuse. <a href="http://www.acrolon.com/support/login.aspx?fromTankNet=true"
+                                                                    target="_blank">Read More</a>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+
+<div class="col-12 col-xl-2">
+    <div class="row align-items-start">
+        <div class="col-6 col-xl-12">
+            <div class="card shadow-sm ">
+                <div class="card-header bg-primary">
+                    About TankNET
+                </div>
+                <div class="card-body">
+
+
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-xl-12">
+            <div class="card  shadow-sm mt-xl-4 ">
+                <div class="card-header bg-primary">
+                    User Guides
+                </div>
+                <div class="card-body">
+                    <a href="http://www.acrolon.com/support/uploads/PL-1%20User's%20Guide%20v2.0%20(PDF).pdf"
+                       target="_blank">PL-1<span id="ctl00_phW_Lbl7">User's Guide</span></a><br />
+                    <br />
+                    <a href="http://www.acrolon.com/support/uploads/TC-1%20User's%20Guide%20(Rev%202.0).pdf"
+                       target="_blank">TC-1<span id="ctl00_phW_Lbl8">User's Guide</span></a><br />
+                    <br />
+                    <a href="http://www.acrolon.com/support/uploads/D-Series%20Quick-Start%20Operators%20Guide.pdf"
+                       target="_blank">D-Series<span id="ctl00_phW_Lbl9">User's Guide</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
